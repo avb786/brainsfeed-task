@@ -8,10 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
+import { MapComponent } from './map/map.component';
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    CompnayListComponent
+    CompnayListComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +25,9 @@ import {ButtonModule} from 'primeng/button';
     BrowserAnimationsModule,
     MatDialogModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    LeafletModule,
+    ProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
