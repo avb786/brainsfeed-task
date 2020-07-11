@@ -1,7 +1,8 @@
 <div class="container-fluid">
     <div class="container col-md-12 col-xs-12 col-sm-12">
-        <h1 class="text-center mt-2" style="font-size: 30px;"><u>Companies List</u></h1>
-        <span class="mb-3" style="position: relative;bottom: 10px;"><b>Total companies: </b>  {{companyDetails.length}} of 5</span>
+        <h1 class="text-center mt-2" style="font-size: 30px;"><span class="bg-light rounded p-3">Companies List</span></h1>
+        <span class="mb-3 " style="position: relative;bottom: 10px;">
+            <b>Total companies: </b>  {{companyDetails.length}} of 5</span>
         <div class="row ">
          <div class=" col-md-6 mb-3" *ngFor="let company of companyDetails">
              <div class="card cards" style="width: 100%; height: 100%;">

@@ -4,12 +4,14 @@ import * as L from 'leaflet';
 import {latLng, MapOptions, tileLayer, Map, Marker, icon} from 'leaflet';
 import { AuthServiceService } from '../auth-service.service';
 // const openGeocoder = require('node-open-geocoder');
+import {NgbRatingConfig} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({  
   selector: 'app-compnay-list',
   templateUrl: './compnay-list.component.html',
-  styleUrls: ['./compnay-list.component.scss']
+  styleUrls: ['./compnay-list.component.scss'],
+  providers: [NgbRatingConfig] 
 })
 export class CompnayListComponent implements OnInit {
   public companyDetails: any;
@@ -21,9 +23,13 @@ export class CompnayListComponent implements OnInit {
   public longitude: any;
   public zoom  = 14;
   public searchText: any;
+ 
 
   public map: Map;
-  constructor(public authService: AuthServiceService) { }
+  constructor(public authService: AuthServiceService, config: NgbRatingConfig) { 
+    config.max = 5;
+    config.readonly = true;
+  }
 
   ngOnInit() {
     this.companyDetails = COMPANY;
