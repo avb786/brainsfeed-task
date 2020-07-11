@@ -14,6 +14,7 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { AgmCoreModule } from '@agm/core';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     ProgressSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC8b9DMEmKS893TSU2zE5R5afNkkny5Ewk'
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
