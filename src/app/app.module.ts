@@ -12,7 +12,6 @@ import { MapComponent } from './map/map.component';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { AgmCoreModule } from '@agm/core';
-import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -21,7 +20,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     CompnayListComponent,
     MapComponent,
-    FilterPipe
   ],
   imports: [
     BrowserModule,
