@@ -11,23 +11,30 @@ import {ButtonModule} from 'primeng/button';
 import { MapComponent } from './map/map.component';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
-
+import { AgmCoreModule } from '@agm/core';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompnayListComponent,
-    MapComponent
+    MapComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
     DialogModule,
     ButtonModule,
     LeafletModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC8b9DMEmKS893TSU2zE5R5afNkkny5Ewk'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

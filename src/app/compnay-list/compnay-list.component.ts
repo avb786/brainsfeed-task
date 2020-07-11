@@ -17,6 +17,10 @@ export class CompnayListComponent implements OnInit {
   public companyDetailsPopUp: any;
   public showCompanyDetailsPopup = false;
   mapOptions: MapOptions;
+  public latitude: any;
+  public longitude: any;
+  public zoom  = 14;
+  public searchText: any;
 
   public map: Map;
   constructor(public authService: AuthServiceService) { }
@@ -28,7 +32,9 @@ export class CompnayListComponent implements OnInit {
   showCompanyDetails(companyDetails) {
     this.showCompanyDetailsPopup = true;
     this.companyDetailsPopUp = companyDetails;
-    this.initializeMapOptions(companyDetails.latitude, companyDetails.longitude);
+    this.latitude = companyDetails.latitude;
+    this.longitude = companyDetails.longitude;
+    // this.initializeMapOptions(companyDetails.latitude, companyDetails.longitude);
     this.displayCompanyDetails = true;
   }
 
