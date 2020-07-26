@@ -14,12 +14,14 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompnayListComponent,
     MapComponent,
+    CompanyDetailsComponent,
   ],
   imports: [
     BrowserModule,

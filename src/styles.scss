@@ -8,3 +8,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.bg-img{
+    background-image: url('/src/assets/Abstractplexus_Updated.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
